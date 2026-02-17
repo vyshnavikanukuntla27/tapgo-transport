@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Transport</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="updateProgress(100); generateQR(); confetti(); generateTicketID()">
+<div class="progress"></div>
+
+<div class="container">
+  <h1>Select Transport</h1>
+
+  <div class="glass">
+
+    <div class="transport-option" onclick="selectRide('Metro')">
+      <div class="option">🚇</div>
+      <p>Metro (Intra-city)</p>
+    </div>
+
+    <div class="transport-option" onclick="selectRide('Cab')">
+      <div class="option">🚕</div>
+      <p>Cab (Intra-city)</p>
+    </div>
+
+    <div class="transport-option" onclick="selectRide('Bus')">
+      <div class="option">🚌</div>
+      <p>Bus (Inter-city)</p>
+    </div>
+
+    <div class="transport-option" onclick="selectRide('Train')">
+      <div class="option">🚆</div>
+      <p>Train (Inter-city)</p>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+<div style="position:fixed; top:10px; right:15px;">
+  <button onclick="toggleMode()">🌙</button>
+  <button onclick="speakPage()">🔊</button>
+  <button onclick="resetApp()">🔄</button>
+</div>
+
+</html>

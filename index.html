@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TapGo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="updateProgress(100); generateQR(); confetti(); generateTicketID()">
+
+<div class="progress"></div>
+
+<div class="container">
+  <h1>TapGo</h1>
+  <p>Smart Public Transport Booking</p>
+
+  <div class="glass">
+    <button onclick="window.location='ride.html'">
+      TAP TO START
+    </button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+<div style="position:fixed; top:10px; right:15px;">
+  <button onclick="toggleMode()">🌙</button>
+  <button onclick="speakPage()">🔊</button>
+  <button onclick="resetApp()">🔄</button>
+</div>
+
+</html>

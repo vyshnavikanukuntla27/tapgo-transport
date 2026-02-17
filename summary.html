@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Journey Summary</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="updateProgress(100); generateQR(); confetti(); generateTicketID()">
+
+
+<div class="progress"></div>
+
+<div class="container">
+  <h1>Journey Summary</h1>
+
+  <div class="glass">
+
+    <p><strong>Transport:</strong> <span id="rideSum"></span></p>
+    <p><strong>From:</strong> <span id="originSum"></span></p>
+    <p><strong>To:</strong> <span id="destSum"></span></p>
+    <p><strong>Distance:</strong> <span id="distSum"></span> km</p>
+    <p><strong>Time:</strong> <span id="timeSum"></span> hrs</p>
+   <p><strong>Fare:</strong> ₹ <span id="fareSum" class="fade"></span></p>
+    <button onclick="window.location='payment.html'">
+      Proceed to Payment
+    </button>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+<div style="position:fixed; top:10px; right:15px;">
+  <button onclick="toggleMode()">🌙</button>
+  <button onclick="speakPage()">🔊</button>
+  <button onclick="resetApp()">🔄</button>
+</div>
+
+</html>

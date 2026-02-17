@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Success</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body onload="updateProgress(100); generateQR(); confetti(); generateTicketID()">
+
+<div class="progress"></div>
+
+<div class="container">
+  <h1>✔ Ticket Confirmed</h1>
+<p><strong>Ticket ID:</strong> <script>document.write(localStorage.getItem("ticketID"))</script></p>
+
+  <div id="qr"></div>
+
+  <button onclick="window.location='index.html'">
+    Book Another Journey
+  </button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+<div style="position:fixed; top:10px; right:15px;">
+  <button onclick="toggleMode()">🌙</button>
+  <button onclick="speakPage()">🔊</button>
+  <button onclick="resetApp()">🔄</button>
+</div>
+
+</html>
